@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    background:#111;
+
+}
+header{
+    max-width: 600px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 25px 30px;
+    box-shadow: 0 0 100px  rgba(255, 255, 255, 0.5);
+}
+
+#add_task{
+    display: flex;
+}
+h3{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+input, button{
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#task_input{
+    flex: 1 1 0%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 5px 10px;
+    padding: 10px 18px;
+    transition: 0.5s;
+    transition-property: border-left, border-right, box-shadow;
+}
+
+#settime{
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 5px 10px;
+    padding: 10px 18px;
+}
+#task_input::placeholder{
+    color: white;
+}
+
+#task_input:focus{ 
+    border-left: solid 8px #4285f4;
+    border-right: solid 8px #4285f4;
+    box-shadow: 0px 0px 100px rgba(66, 133, 244, 0.8);
+
+
+}
+#add{
+    padding: 0px 20px;
+    border-radius: 5px;
+    color: white;
+    background: #4285f4;
+    text-transform: uppercase;
+    margin: 5px 0px;
+    margin-right: 10px;
+}
+#add:hover{
+    border-left: solid 8px  rgba(255, 255, 255, 0.5);;
+    border-right: solid 8px  rgba(255, 255, 255, 0.5);;
+    box-shadow: 0 0 100px  rgba(255, 255, 255, 0.5);
+}
+
+main{
+    flex: 1 1 0%;
+    background-color: #111;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding: 10px 20px;
+    max-width: 600px;
+    width: 100%;
+}
+#tasks{
+    padding: 0px 19px;
+}
+    
+.task{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 15px;
+    padding: 0px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+   
+}
+.time{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    font-size: 10px;
+}
+.content input{
+    color: #fff;
+    padding: 15px 18px;
+    font-size: 15px;
+    transition: 0.8s;
+    transition-property: box-shadow;
+}
+.content input:focus{ 
+    box-shadow: 0 0 100px rgba(66, 133, 244, 0.8);;
+}
+
+.edit, .delete{
+    text-transform: uppercase;
+    margin : 5px 0px;
+    padding: 5px 12px;
+    transition-property: border-bottom;
+    
+}
+.edit{
+    margin-right: 10px;
+}
+
+.delete:hover{
+    border-bottom: 3px solid red;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+    
+}
+
+.edit:hover{
+    border-bottom: 3px solid #4285f4;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+}
